@@ -1,4 +1,7 @@
 package Map.Rooms;
 
-public class Room {
+public abstract class Room {
+    public void print() {
+        System.out.println("-");
+    }
 }
