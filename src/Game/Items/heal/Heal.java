@@ -10,7 +10,7 @@ public abstract class Heal extends Item {
         this.healPower = healPower;
     }
 
-    void heal(Player player) {
+    public void heal(Player player) {
         player.heal(healPower);
         amount -= 1;
     }

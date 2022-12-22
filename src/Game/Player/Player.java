@@ -13,6 +13,8 @@ public class Player {
 
     public Player(int hp, Bag bag) {
         this.hp = hp;
+        this.bag = bag;
+        this.bag.setPlayer(this);
     }
 
     public String getName() {

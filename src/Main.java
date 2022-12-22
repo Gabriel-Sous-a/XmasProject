@@ -2,7 +2,6 @@ import VisualStats.TextArtImages;
 
 public class Main {
     public static void main(String[] args) {
-<<<<<<< Updated upstream
         System.out.println(
                 " ______________\n" +
                         "|\\ ___________ /|\n" +
@@ -20,9 +19,7 @@ public class Main {
                         "| |           | |\n" +
                         "|_|___________|_|"
         );
-=======
         TextArtImages.door();
 
->>>>>>> Stashed changes
     }
 }
