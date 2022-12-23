@@ -9,6 +9,7 @@ public class Player {
     String name;
     int hp;
     Bag bag;
+    Node currentLocation;
     Stack<Node> path = new Stack<>();
 
     public Player(int hp, Bag bag) {
@@ -58,5 +59,20 @@ public class Player {
             return;
         }
         hp += amount;
+    }
+    public void move(Node nextLocation){
+        if (currentLocation != null){
+            path.add(currentLocation);
+        }
+        currentLocation = nextLocation;
+    }
+    public void goBack(){
+        if (path.empty()){
+            return;
+        }
+        currentLocation = path.pop();
+    }
+    public void openPlayerBag(){
+        bag.openBag();
     }
 }
