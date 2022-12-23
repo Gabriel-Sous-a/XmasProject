@@ -9,9 +9,9 @@ import inputs.Input;
 import java.util.ArrayList;
 
 public class Bag {
-    ArrayList<Heal> heal = new ArrayList<>();
-    ArrayList<Weapon> weapon = new ArrayList<>();
-    ArrayList<Key> key = new ArrayList<>();
+    ArrayList<Heal> healing = new ArrayList<>();
+    ArrayList<Weapon> weapons = new ArrayList<>();
+    ArrayList<Key> keys = new ArrayList<>();
     Player player;
 
 
@@ -22,29 +22,29 @@ public class Bag {
         this.player = player;
     }
 
-    public ArrayList<Heal> getHeal() {
-        return heal;
+    public ArrayList<Heal> getHealing() {
+        return healing;
     }
 
-    public ArrayList<Weapon> getWeapon() {
-        return weapon;
+    public ArrayList<Weapon> getWeapons() {
+        return weapons;
     }
 
-    public ArrayList<Key> getKey() {
-        return key;
+    public ArrayList<Key> getKeys() {
+        return keys;
     }
 
     public void addItem(Item item){
         if (item.getClass() == Bandage.class || item.getClass() == FistAidKit.class){
-            heal.add((Heal) item);
+            healing.add((Heal) item);
             return;
         }
         if (item.getClass() == Knife.class || item.getClass() == MetalBar.class){
-            weapon.add((Weapon) item);
+            weapons.add((Weapon) item);
             return;
         }
         if (item.getClass() == ShiningKey.class || item.getClass() == Uselesskey.class){
-            key.add((Key) item);
+            keys.add((Key) item);
         }
 
     }
@@ -66,6 +66,7 @@ public class Bag {
                     openWeapon();
                     break;
                 case 3:
+                    openKey();
                     break;
                 case 0:
                     return;
@@ -76,9 +77,9 @@ public class Bag {
     }
     public void openHeal(){
         do {
-            heal.stream().forEach(e -> System.out.println((heal.indexOf(e) + 1)+ " - " + e.name));
+            healing.stream().forEach(e -> System.out.println((healing.indexOf(e) + 1)+ " - " + e.name));
             System.out.println("0 - back");
-            int op = Input.inputMenuOptions(0,heal.size());
+            int op = Input.inputMenuOptions(0, healing.size());
             if (op == 0){
                 return;
             }
@@ -91,21 +92,20 @@ public class Bag {
             int itemOp = Input.inputMenuOptions(1,3);
             switch (itemOp){
                 case 1:
-                    heal.get(op - 1).heal(player);
+                    healing.get(op - 1).heal(player);
                     break;
                 case 2:
-                    System.out.println(heal.get(op - 1).getDescription());
+                    System.out.println(healing.get(op - 1).getDescription());
                 case 3:
-                    openKey();
                     break;
             }
         }while (true);
     }
     public void openWeapon(){
         do {
-            weapon.stream().forEach(e -> System.out.println((weapon.indexOf(e) + 1)+ " - " + e.name));
+            weapons.stream().forEach(e -> System.out.println((weapons.indexOf(e) + 1)+ " - " + e.name));
             System.out.println("0 - back");
-            int op = Input.inputMenuOptions(0,weapon.size());
+            int op = Input.inputMenuOptions(0, weapons.size());
             if (op == 0){
                 break;
             }
@@ -117,7 +117,7 @@ public class Bag {
             int itemOp = Input.inputMenuOptions(1,2);
             switch (itemOp){
                 case 1:
-                    System.out.println(weapon.get(op - 1).getDescription());
+                    System.out.println(weapons.get(op - 1).getDescription());
                     break;
                 case 2:
                     break;
@@ -128,9 +128,9 @@ public class Bag {
     }
     public void openKey(){
         do {
-            key.stream().forEach(e -> System.out.println((key.indexOf(e) + 1)+ " - " + e.name));
+            keys.stream().forEach(e -> System.out.println((keys.indexOf(e) + 1)+ " - " + e.name));
             System.out.println("0 - back");
-            int op = Input.inputMenuOptions(0,key.size());
+            int op = Input.inputMenuOptions(0, keys.size());
             if (op == 0){
                 break;
             }
@@ -142,7 +142,7 @@ public class Bag {
             int itemOp = Input.inputMenuOptions(1,2);
             switch (itemOp){
                 case 1:
-                    System.out.println(weapon.get(op - 1).getDescription());
+                    System.out.println(weapons.get(op - 1).getDescription());
                     break;
                 case 2:
                     break;
