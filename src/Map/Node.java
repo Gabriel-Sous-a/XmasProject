@@ -12,6 +12,7 @@ public class Node {
     private Node backRight;
     private Room Value;
     private Item item;
+    private boolean lock;
 
     public Node() {
     }
@@ -23,6 +24,18 @@ public class Node {
     public Node(Room value, Item item) {
         Value = value;
         this.item = item;
+        this.lock = true;
+    }
+
+    public Node(Room value, Item item, boolean lock) {
+        Value = value;
+        this.item = item;
+        this.lock = lock;
+    }
+
+    public Node(Room value, boolean lock) {
+        Value = value;
+        this.lock = lock;
     }
 
     public Node getNext() {
@@ -79,5 +92,13 @@ public class Node {
 
     public void setBackRight(Node backRight) {
         this.backRight = backRight;
+    }
+
+    public boolean isLock() {
+        return lock;
+    }
+
+    public void setLock(boolean lock) {
+        this.lock = lock;
     }
 }
