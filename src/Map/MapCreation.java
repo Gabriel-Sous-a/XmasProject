@@ -14,27 +14,27 @@ public class MapCreation {
     }
 
     public static Node create () {
-        Node nodeStart = new Node(new Start());
-        Node nodeA = new Node(new A());        //nao tem next, so right e left
-        Node nodeAA = new Node(new AA());
-        Node nodeAAA = new Node(new AAA());      //nao tem next, so right e left
-        Node nodeAB = new Node(new AB());       //nao tem next, so right e left
-        Node nodeABA = new Node(new ABA());
-        Node nodeABB = new Node(new ABB());
-        Node nodeABBA = new Node(new ABBA());
-        Node nodeB = new Node(new B());
-        Node nodeBA = new Node(new BA());
-        Node nodeBAA = new Node(new BAA());      //nao tem back, so backRight e backLeft
-        Node nodeBAAA = new Node(new BAAA());
-        Node nodeBB = new Node(new BB());
-        Node nodeC = new Node(new C());
-        Node nodeCA = new Node(new CA());
-        Node nodeCAA = new Node(new CAA());
-        Node nodeCB = new Node(new CB());
-        Node nodeCC = new Node(new CC());
-        Node nodeF = new Node(new F());
-        Node nodeFA = new Node(new FA());
-        Node nodeFinal = new Node(new Final());
+        Node nodeStart = new Node(new Start("0000"));
+        Node nodeA = new Node(new A("A000"));        //nao tem next, so right e left
+        Node nodeAA = new Node(new AA("AA00"));
+        Node nodeAAA = new Node(new AAA("AAA0"));      //nao tem next, so right e left
+        Node nodeAB = new Node(new AB("AB00"));       //nao tem next, so right e left
+        Node nodeABA = new Node(new ABA("ABA0"));
+        Node nodeABB = new Node(new ABB("ABB0"));
+        Node nodeABBA = new Node(new ABBA("ABBA"));
+        Node nodeB = new Node(new B("B000"));
+        Node nodeBA = new Node(new BA("BA00"));
+        Node nodeBAA = new Node(new BAA("BAA0"));      //nao tem back, so backRight e backLeft
+        Node nodeBAAA = new Node(new BAAA("BAAA"));
+        Node nodeBB = new Node(new BB("BB00"));
+        Node nodeC = new Node(new C("C000"), false);
+        Node nodeCA = new Node(new CA("CA00"));
+        Node nodeCAA = new Node(new CAA("CAA0"));
+        Node nodeCB = new Node(new CB("CB00"));
+        Node nodeCC = new Node(new CC("CC00"));
+        Node nodeF = new Node(new F("F000"), false);
+        Node nodeFA = new Node(new FA("FA00"));
+        Node nodeFinal = new Node(new Final("0000"));
         setNode(nodeStart, nodeB, nodeA, nodeC, null,null,null);
         setNode(nodeA, null, nodeAB, nodeAA, nodeStart,null, null);
         setNode(nodeB, null, nodeBB, nodeBA, nodeStart,null,null);
