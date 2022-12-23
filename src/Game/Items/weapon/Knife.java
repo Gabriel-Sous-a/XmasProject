@@ -5,6 +5,6 @@ import Game.Items.items_text.Description;
 
 public class Knife extends Weapon{
     public Knife(String name, int amount) {
-        super(name, Art.knifeArt(), Description.knifeDescription(), amount, 2);
+        super(name, Art.knifeArt(), Description.knifeDescription(), 2);
     }
 }

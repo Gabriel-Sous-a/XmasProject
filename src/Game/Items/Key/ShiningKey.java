@@ -3,15 +3,23 @@ package Game.Items.Key;
 import Game.Items.items_text.Art;
 import Game.Items.items_text.Description;
 import Map.Node;
-import Map.Rooms.Room;
 
 public class ShiningKey extends Key{
-    public ShiningKey(String name, String code ,int amount) {
-        super(name, Art.shiningKeyArt(code), Description.shiningKeyDescription(code), code , amount);
+    public ShiningKey(String name, String code) {
+        super(name, Art.shiningKeyArt(code), Description.shiningKeyDescription(code), code);
     }
 
     @Override
-    public void open(Node locked) {
+    public boolean open(Node locked) {
+        if (!locked.isLock() && locked.getValue().getCode().equals(code)){
+            locked.setLock(true);
+            return true;
+        }
+        if (locked.isLock()){
+            System.out.println("this door is already open");
+        }
 
+        System.out.println("This is the wrong key");
+        return false;
     }
 }
