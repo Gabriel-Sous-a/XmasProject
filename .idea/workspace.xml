@@ -4,7 +4,55 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569e18ab-a437-4009-abbc-1b9d17c4cbbe" name="Changes" comment="" />
+    <list default="true" id="569e18ab-a437-4009-abbc-1b9d17c4cbbe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Colors.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/Bag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/Bag.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/Key/Key.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/Key/Key.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/Key/ShiningKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/Key/ShiningKey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/Key/Uselesskey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/Key/Uselesskey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/heal/Bandage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/heal/Bandage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/heal/FistAidKit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/heal/FistAidKit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/heal/Heal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/heal/Heal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/weapon/Knife.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/weapon/Knife.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/weapon/MetalBar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Game/Items/weapon/MetalBar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Game/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Game/Player/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Game/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Game/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/MapCreation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/MapCreation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/A.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/A.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/AA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/AA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/AAA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/AAA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/AB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/AB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/ABA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/ABA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/ABB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/ABB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/ABBA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/ABBA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/B.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/B.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/BA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/BA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/BAA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/BAA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/BAAA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/BAAA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/BB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/BB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/C.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/C.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/CA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/CA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/CAA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/CAA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/CB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/CB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/CC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/CC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/F.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/F.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/FA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/FA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/Final.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/Final.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/Rooms/Start.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/Map/RunMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/Map/RunMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/MazeGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/MazeGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/VisualStats/Colors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/VisualStats/Colors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XmasProject/VisualStats/TextArtImages.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XmasProject/VisualStats/TextArtImages.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Colors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MazeGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MazeGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VisualStats/TextArtImages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VisualStats/TextArtImages.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,18 +62,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubProjectSettings">
-    <option name="branchProtectionPatterns">
-      <list>
-        <option value="main" />
-      </list>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
