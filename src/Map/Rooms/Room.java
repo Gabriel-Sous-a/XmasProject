@@ -8,6 +8,10 @@ public abstract class Room {
         this.code = code;
     }
 
+    public String getCode() {
+        return code;
+    }
+
     public void print() {
         System.out.println("-");
     }

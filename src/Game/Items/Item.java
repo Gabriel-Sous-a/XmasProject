@@ -6,13 +6,12 @@ public abstract class Item {
     protected String name;
     protected String asciiArt;
     protected String description;
-    protected int amount;
 
-    public Item(String name, String asciiArt, String description, int amount) {
+
+    public Item(String name, String asciiArt, String description) {
         this.name = name;
         this.asciiArt = asciiArt;
         this.description = description;
-        this.amount = amount;
     }
 
     public String getName() {
@@ -37,14 +36,6 @@ public abstract class Item {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public int getAmount() {
-        return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
     }
 
 }

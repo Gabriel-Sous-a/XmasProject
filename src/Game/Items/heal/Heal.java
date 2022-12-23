@@ -5,13 +5,12 @@ import Game.Player.Player;
 
 public abstract class Heal extends Item {
     protected int healPower;
-    public Heal(String name, String asciiArt, String description, int amount, int healPower) {
-        super(name, asciiArt, description, amount);
+    public Heal(String name, String asciiArt, String description, int healPower) {
+        super(name, asciiArt, description);
         this.healPower = healPower;
     }
 
     public void heal(Player player) {
         player.heal(healPower);
-        amount -= 1;
     }
 }

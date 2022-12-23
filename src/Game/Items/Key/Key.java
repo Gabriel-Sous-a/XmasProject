@@ -7,9 +7,9 @@ import Map.Rooms.Room;
 public abstract class Key extends Item {
     String code;
 
-    public Key(String name, String asciiArt, String description, String code, int amount) {
-        super(name, asciiArt, description, amount);
+    public Key(String name, String asciiArt, String description, String code) {
+        super(name, asciiArt, description);
         this.code = code;
     }
-    public abstract void open(Node Locked);
+    public abstract boolean open(Node Locked);
 }

@@ -5,6 +5,6 @@ import Game.Items.items_text.Description;
 
 public class MetalBar extends Weapon{
     public MetalBar(String name, int amount) {
-        super(name, Art.metalBarArt(), Description.metalBarDescription(), amount, 1);
+        super(name, Art.metalBarArt(), Description.metalBarDescription(), 1);
     }
 }
