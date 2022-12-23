@@ -163,7 +163,10 @@ public class Bag {
             if (op == 0) {
                 break;
             }
-            keys.get(op - 1).open(locked);
+            boolean lock = keys.get(op - 1).open(locked);
+            if (lock){
+                break;
+            }
         } while (true);
 
 
