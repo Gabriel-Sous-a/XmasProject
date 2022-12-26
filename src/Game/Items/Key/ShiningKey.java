@@ -17,6 +17,7 @@ public class ShiningKey extends Key{
         }
         if (locked.isLock()){
             System.out.println("this door is already open");
+            return false;
         }
 
         System.out.println("This is the wrong key");
