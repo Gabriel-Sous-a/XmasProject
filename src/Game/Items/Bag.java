@@ -5,7 +5,7 @@ import Game.Items.heal.*;
 import Game.Items.weapon.*;
 import Game.Player.Player;
 import Map.Node;
-import inputs.Input;
+import Inputs.Input;
 
 import java.util.ArrayList;
 
@@ -47,7 +47,6 @@ public class Bag {
         if (item.getClass() == ShiningKey.class || item.getClass() == Uselesskey.class) {
             keys.add((Key) item);
         }
-
     }
 
     public void openBag() {

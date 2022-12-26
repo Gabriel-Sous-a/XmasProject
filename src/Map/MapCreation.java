@@ -1,5 +1,6 @@
 package Map;
 
+import Game.Items.Key.ShiningKey;
 import Map.Rooms.*;
 
 public class MapCreation {
@@ -25,11 +26,11 @@ public class MapCreation {
         Node nodeB = new Node(new B("B000"));
         Node nodeBA = new Node(new BA("BA00"));
         Node nodeBAA = new Node(new BAA("BAA0"));      //nao tem back, so backRight e backLeft
-        Node nodeBAAA = new Node(new BAAA("BAAA"));
+        Node nodeBAAA = new Node(new BAAA("BAAA"), new ShiningKey("C Key", "C000"));
         Node nodeBB = new Node(new BB("BB00"));
         Node nodeC = new Node(new C("C000"), false);
         Node nodeCA = new Node(new CA("CA00"));
-        Node nodeCAA = new Node(new CAA("CAA0"));
+        Node nodeCAA = new Node(new CAA("CAA0"), new ShiningKey("F Key", "F000"));
         Node nodeCB = new Node(new CB("CB00"));
         Node nodeCC = new Node(new CC("CC00"));
         Node nodeF = new Node(new F("F000"), false);

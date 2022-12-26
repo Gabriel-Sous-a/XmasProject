@@ -1,6 +1,7 @@
 package Map;
 
 import Game.Items.Item;
+import Game.Npc.Npc;
 import Map.Rooms.Room;
 
 public class Node {
@@ -13,12 +14,14 @@ public class Node {
     private Room Value;
     private Item item;
     private boolean lock;
+    private Npc npc;
 
     public Node() {
     }
 
     public Node(Room value) {
         Value = value;
+        this.lock = true;
     }
 
     public Node(Room value, Item item) {
@@ -36,6 +39,13 @@ public class Node {
     public Node(Room value, boolean lock) {
         Value = value;
         this.lock = lock;
+    }
+
+    public Node(Room value, Item item, boolean lock, Npc npc) {
+        Value = value;
+        this.item = item;
+        this.lock = lock;
+        this.npc = npc;
     }
 
     public Node getNext() {
