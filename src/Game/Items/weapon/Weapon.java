@@ -1,14 +1,16 @@
 package Game.Items.weapon;
 
 import Game.Items.Item;
+import Game.Npc.Violent.Violent;
 
 public abstract class Weapon extends Item {
-    protected int damage;
 
-    public Weapon(String name, String asciiArt, String description,int damage) {
+
+    public Weapon(String name, String asciiArt, String description) {
         super(name, asciiArt, description);
-        this.damage = damage;
     }
-
+        public void use(Violent violent){
+            violent.setAlive(false);
+        }
 
 }

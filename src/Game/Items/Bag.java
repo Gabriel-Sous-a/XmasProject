@@ -3,6 +3,7 @@ package Game.Items;
 import Game.Items.Key.*;
 import Game.Items.heal.*;
 import Game.Items.weapon.*;
+import Game.Npc.Violent.Violent;
 import Game.Player.Player;
 import Map.Node;
 import Inputs.Input;
@@ -169,5 +170,16 @@ public class Bag {
         } while (true);
 
 
+    }
+    public Weapon violentNpcEvent(){
+
+            weapons.stream().forEach(e -> System.out.println((weapons.indexOf(e) + 1) + " - " + e.name));
+            System.out.println("0 - back");
+            int op = Input.inputMenuOptions(0, weapons.size());
+            if (op == 0) {
+                return null;
+            }
+
+            return weapons.get(op - 1);
     }
 }
