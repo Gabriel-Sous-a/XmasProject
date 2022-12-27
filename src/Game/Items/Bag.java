@@ -173,13 +173,13 @@ public class Bag {
     }
     public Weapon violentNpcEvent(){
 
-            weapons.stream().forEach(e -> System.out.println((weapons.indexOf(e) + 1) + " - " + e.name));
-            System.out.println("0 - back");
-            int op = Input.inputMenuOptions(0, weapons.size());
-            if (op == 0) {
-                return null;
-            }
+        System.out.println("0 - fists");
+        weapons.stream().forEach(e -> System.out.println((weapons.indexOf(e) + 1) + " - " + e.name));
+        int op = Input.inputMenuOptions(0, weapons.size());
+        if (op == 0) {
+            return null;
+        }
 
-            return weapons.get(op - 1);
+        return weapons.get(op - 1);
     }
 }
