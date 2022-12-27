@@ -1,10 +1,11 @@
 package Game.Npc.Violent;
 
 import Game.Items.weapon.MetalBar;
+import Game.Npc.Npc_art.Npc_art;
 
 public class CrazyMan extends Violent{
     public CrazyMan() {
-        super("Crazy man", "",1,new MetalBar());
+        super("Crazy man", Npc_art.crazyManArt(),1,new MetalBar());
     }
 
     @Override
@@ -19,7 +20,7 @@ public class CrazyMan extends Violent{
 
     @Override
     public void deathDialogue() {
-        System.out.println("The crazy mann is dead");
+        System.out.println("The crazy mann is knocked out");
     }
 
     @Override

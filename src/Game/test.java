@@ -7,7 +7,9 @@ import Game.Items.heal.Bandage;
 import Game.Items.items_text.Art;
 import Game.Items.weapon.Knife;
 import Game.Items.weapon.MetalBar;
+import Game.Npc.Peaceful.Casper;
 import Game.Npc.Peaceful.ElderGhost;
+import Game.Npc.Violent.CrazyMan;
 import Game.Npc.Violent.Demon;
 import Game.Player.Player;
 import Map.Node;
@@ -29,7 +31,16 @@ public class test {
         player.getBag().addItem(key2);
         player.getBag().addItem(new MetalBar());
         Demon demon = new Demon();
-
+        CrazyMan crazyMan = new CrazyMan();
+        ElderGhost elderGhost = new ElderGhost();
+        Casper casper = new Casper();
+        casper.event(player);
+        elderGhost.event(player);
         demon.event(player);
+        crazyMan.event(player);
+
+
+
+
     }
 }

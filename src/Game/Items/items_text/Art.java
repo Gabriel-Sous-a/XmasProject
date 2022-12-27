@@ -1,5 +1,7 @@
 package Game.Items.items_text;
 
+import VisualStats.Colors;
+
 public class Art {
     public static String knifeArt() {
         return "                                                                    \n" +
@@ -31,14 +33,16 @@ public class Art {
     }
 
     public static String shiningKeyArt(String code) {
-        return "     8 8 8 8                     ,ooo.\n" +
+        return Colors.YELLOW +
+                "     8 8 8 8                     ,ooo.\n" +
                 "     8a8 8a8                    oP   ?b\n" +
                 "    d888a888zzzzzzzz" + code + "zzzzzzzz8     8b\n" +
-                "     `\"\"^\"\"'                    ?o___oP'";
+                "     `\"\"^\"\"'                    ?o___oP'"
+                + Colors.RESET;
     }
 
     public static String uselessKeyArt() {
-        return "     8 8 8 8                     ,ooo.\n" +
+        return  "     8 8 8 8                     ,ooo.\n" +
                 "     8a8 8a8                    oP   ?b\n" +
                 "    d888a888zzzzzzzz*$@%zzzzzzzz8     8b\n" +
                 "     `\"\"^\"\"'                    ?o___oP'";

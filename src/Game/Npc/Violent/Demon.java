@@ -1,10 +1,11 @@
 package Game.Npc.Violent;
 
 import Game.Items.weapon.Knife;
+import Game.Npc.Npc_art.Npc_art;
 
 public class Demon extends Violent{
     public Demon() {
-        super("Demon", "", 2, new Knife());
+        super("Demon", Npc_art.demoArt(), 2, new Knife());
     }
 
     @Override
