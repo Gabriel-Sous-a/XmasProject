@@ -25,6 +25,7 @@ public abstract class Violent extends Npc {
 
     @Override
     public void event(Player player) {
+        System.out.println(this.asciiArt);
         initialDialogue();
         do {
             Weapon temp = player.getBag().violentNpcEvent();
