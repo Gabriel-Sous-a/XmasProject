@@ -125,6 +125,7 @@ public class Bag {
         do {
             weapons.stream().forEach(e -> System.out.println((weapons.indexOf(e) + 1) + " - " + e.name));
             System.out.println("0 - back");
+            System.out.println("                       Equipped: " + player.getEquipped().getName());
             int op = Input.inputMenuOptions(0, weapons.size());
             if (op == 0) {
                 break;
@@ -134,6 +135,7 @@ public class Bag {
             System.out.println("1 - Equip");
             System.out.println("2 - read description");
             System.out.println("3 - nothing");
+
 
             int itemOp = Input.inputMenuOptions(1, 2);
             switch (itemOp) {

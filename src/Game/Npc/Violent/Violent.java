@@ -41,22 +41,7 @@ public abstract class Violent extends Npc {
         do {
             System.out.println(asciiArt);
             hpBar();
-            System.out.println("1 - Attack      2- Healing items\n" +
-                    "3 - run");
-            player.hpBar();
-            System.out.print("->");
-            int op = Input.inputMenuOptions(1, 3);
-            switch (op) {
-                case 1:
-                    player.attack(this);
-                    break;
-                case 2:
-                    player.getBag().openHeal();
-                    continue;
-                case 3:
-                    System.out.println("You can't run");
-                    break;
-            }
+            player.battleMenu(this);
             if (hp == 0){
                 deathDialogue();
                 alive = false;
