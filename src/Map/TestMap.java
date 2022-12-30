@@ -15,4 +15,5 @@ public class TestMap {
         System.out.println(bag.getKeys().size());
         RunMap.run(player);
     }
+
 }
