@@ -4,6 +4,7 @@ import Game.Items.Bag;
 import Game.Items.weapon.Hands;
 import Game.Items.weapon.Weapon;
 import Game.Npc.Violent.Violent;
+import Inputs.Input;
 import Map.Node;
 
 import java.io.Serializable;
@@ -24,6 +25,7 @@ public class Player implements Serializable {
         this.hp = hp;
         this.bag = bag;
         this.bag.setPlayer(this);
+        this.equipped = new Hands();
     }
 
     public String getName() {
@@ -119,6 +121,31 @@ public class Player implements Serializable {
             System.out.print("❤");
         }
         System.out.println();
+    }
+    public void battleMenu(Violent violent){
+        do {
+            System.out.println("1 - Attack      2- Healing items\n" +
+                    "3 - run");
+            hpBar();
+            System.out.print("->");
+            int op = Input.inputMenuOptions(1, 3);
+            switch (op) {
+                case 1:
+                    attack(violent);
+                    return;
+                case 2:
+                    int temp = bag.getHealing().size();
+                    getBag().openHeal();
+                    if (temp != bag.getHealing().size()){
+                        return;
+                    }
+                    continue;
+                case 3:
+                    System.out.println("You can't run");
+                    return;
+            }
+        }while (true);
+
     }
 
 }
