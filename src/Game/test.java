@@ -7,6 +7,9 @@ import Game.Items.heal.Bandage;
 import Game.Items.items_text.Art;
 import Game.Items.weapon.Knife;
 import Game.Items.weapon.MetalBar;
+import Game.Npc.Peaceful.Casper;
+import Game.Npc.Peaceful.ElderGhost;
+import Game.Npc.Violent.CrazyMan;
 import Game.Npc.Violent.Demon;
 import Game.Player.Player;
 import Map.Node;
@@ -22,31 +25,22 @@ public class test {
         ShiningKey key = new ShiningKey("ABCD");
         ShiningKey key1 = new ShiningKey("ABC0");
         Uselesskey key2 = new Uselesskey("key");
-        Player player = new Player(3,new Bag());
+        Player player = new Player("Adan",5,5,new Bag());
         player.getBag().addItem(key);
         player.getBag().addItem(key1);
         player.getBag().addItem(key2);
-        player.getBag().addItem(new Knife());
         player.getBag().addItem(new MetalBar());
-        player.setEquipped(new Knife());
+        player.getBag().addItem(new Knife());
         Demon demon = new Demon();
         CrazyMan crazyMan = new CrazyMan();
         ElderGhost elderGhost = new ElderGhost();
         Casper casper = new Casper();
-
-        player.getBag().openDoorBagAction(node);
-
-
-
-
-
-
-
-        player.getBag().openDoorBagAction(node);
-        Demon demon = new Demon();
+        player.openPlayerBag();
         demon.event(player);
-        System.out.println(player.getHp());
-        System.out.println(demon.isAlive());
+
+
+
+
 
     }
 }

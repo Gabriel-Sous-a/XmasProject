@@ -13,5 +13,13 @@ public class Input {
         System.out.println("this is not a option");
         return inputMenuOptions(initial,finale);
     }
+    public static String yesOrNo(){
+        Scanner scan = new Scanner(System.in);
+        String temp = scan.next().toUpperCase();
+        if (temp.equals("Y") || temp.equals("N")){
+            return temp;
+        }
+        return yesOrNo();
+    }
 
 }
