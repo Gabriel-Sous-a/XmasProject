@@ -15,7 +15,6 @@ public class Node {
     private Item item;
     private boolean lock;
     private Npc npc;
-
     private boolean win;
 
     public Node() {
@@ -49,6 +48,19 @@ public class Node {
         this.lock = lock;
         this.npc = npc;
     }
+
+    public Node(Room value, Npc npc) {
+        Value = value;
+        this.npc = npc;
+        this.lock = true;
+    }
+
+    public Node(Room value, boolean lock, Npc npc) {
+        Value = value;
+        this.lock = lock;
+        this.npc = npc;
+    }
+
 
     public Node getNext() {
         return next;
@@ -114,11 +126,23 @@ public class Node {
         this.lock = lock;
     }
 
+    public void setItem(Item item) {
+        this.item = item;
+    }
+
     public boolean isWin() {
         return win;
     }
 
     public void setWin(boolean win) {
         this.win = win;
+    }
+
+    public Npc getNpc() {
+        return npc;
+    }
+
+    public void setNpc(Npc npc) {
+        this.npc = npc;
     }
 }
