@@ -5,6 +5,6 @@ import Game.Items.items_text.Description;
 
 public class MetalBar extends Weapon{
     public MetalBar() {
-        super("Metal bar", Art.metalBarArt(), Description.metalBarDescription());
+        super("Metal bar", Art.metalBarArt(), Description.metalBarDescription(),2);
     }
 }

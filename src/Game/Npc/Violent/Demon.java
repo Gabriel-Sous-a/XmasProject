@@ -5,7 +5,7 @@ import Game.Npc.Npc_art.Npc_art;
 
 public class Demon extends Violent{
     public Demon() {
-        super("Demon", Npc_art.demoArt(), 2, new Knife());
+        super("Demon",5 ,Npc_art.demoArt(), 2, new Knife());
     }
 
     @Override
@@ -13,10 +13,6 @@ public class Demon extends Violent{
         System.out.println("Your piece of shit you entered in my realm, i'm the blade demon,you can't pass without kill me, choose your weapon and come!");
     }
 
-    @Override
-    public void wrongWeaponDialog() {
-        System.out.println("Wrong weapon your dump, get out of here if you don't wanna die!");
-    }
 
     @Override
     public void deathDialogue() {

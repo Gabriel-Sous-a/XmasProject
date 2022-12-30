@@ -30,14 +30,12 @@ public class test {
         player.getBag().addItem(key1);
         player.getBag().addItem(key2);
         player.getBag().addItem(new MetalBar());
+        player.setEquipped(new Knife());
         Demon demon = new Demon();
         CrazyMan crazyMan = new CrazyMan();
         ElderGhost elderGhost = new ElderGhost();
         Casper casper = new Casper();
-        casper.event(player);
-        elderGhost.event(player);
         demon.event(player);
-        crazyMan.event(player);
 
 
 
