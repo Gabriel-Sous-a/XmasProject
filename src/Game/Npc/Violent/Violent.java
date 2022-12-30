@@ -1,15 +1,13 @@
 package Game.Npc.Violent;
 
-import Game.Items.Bag;
 import Game.Items.weapon.Weapon;
 import Game.Npc.Npc;
 import Game.Player.Player;
 
 public abstract class Violent extends Npc {
-    int damage;
-    boolean alive;
-    Weapon weapon;
-    String dialogue;
+    protected int damage;
+    protected boolean alive;
+    protected Weapon weapon;
     public Violent(String name, String asciiArt, int damage,Weapon weapon) {
         super(name, asciiArt);
         this.damage = damage;
@@ -27,15 +25,31 @@ public abstract class Violent extends Npc {
 
     @Override
     public void event(Player player) {
-        System.out.println();
-        Weapon temp = player.getBag().violentNpcEvent();
-        if (temp.getClass() == weapon.getClass()){
-            temp.use(this);
-            return;
-        }
-        hit(player);
+        System.out.println(this.asciiArt);
+        initialDialogue();
+        do {
+            Weapon temp = player.getBag().violentNpcEvent();
+            if (temp == null){
+                fistsDialogue();
+                hit(player);
+                continue;
+            }
+            if (temp.getClass() == weapon.getClass()){
+                temp.use(this);
+                deathDialogue();
+                return;
+            }
+            hit(player);
+            wrongWeaponDialog();
+        }while (player.getHp() > 0);
+
     }
     public void hit(Player player){
         player.takeDamage(damage);
     }
+    public abstract void initialDialogue();
+    public abstract void wrongWeaponDialog();
+    public abstract void deathDialogue();
+    public abstract void fistsDialogue();
+
 }
