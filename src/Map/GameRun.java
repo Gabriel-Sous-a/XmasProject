@@ -1,6 +1,7 @@
 package Map;
 
 import Game.Items.Bag;
+import Game.Items.Key.ShiningKey;
 import Game.Player.Player;
 import VisualStats.Colors;
 import VisualStats.TextArtImages;
@@ -14,6 +15,7 @@ public class GameRun {
         Bag bag = new Bag();
         Player player = new Player("player",5,5,bag);
         bag.setPlayer(player);
+        bag.addItem(new ShiningKey("1111"));
         TextArtImages.introTheHouseInTheWoods();
         switch (stringCheck()){
             case "1":
