@@ -1,3 +1,4 @@
+import Map.RunMap;
 import VisualStats.Colors;
 import VisualStats.TextArtImages;
 
@@ -41,6 +42,7 @@ public class TheHouseInTheWoods {
             option = sc.nextInt();
             switch (option) {
                 case 1:
+                  //  RunMap.run(player);
                     //game();
                     break;
                 case 2:

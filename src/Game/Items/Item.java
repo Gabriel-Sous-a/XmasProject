@@ -14,6 +14,9 @@ public abstract class Item {
         this.description = description;
     }
 
+    protected Item() {
+    }
+
     public String getName() {
         return name;
     }

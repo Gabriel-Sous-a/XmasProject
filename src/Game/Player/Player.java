@@ -6,6 +6,7 @@ import Game.Items.weapon.Weapon;
 import Game.Npc.Violent.Violent;
 import Inputs.Input;
 import Map.Node;
+import Map.Rooms.Room;
 
 import java.io.Serializable;
 import java.util.Stack;
@@ -28,6 +29,11 @@ public class Player implements Serializable {
         this.equipped = new Hands();
     }
 
+    public Player() {
+
+    }
+
+
     public String getName() {
         return name;
     }
@@ -38,6 +44,14 @@ public class Player implements Serializable {
 
     public int getHp() {
         return hp;
+    }
+
+    public Node getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public void setCurrentLocation(Node currentLocation) {
+        this.currentLocation = currentLocation;
     }
 
     public void setHp(int hp) {

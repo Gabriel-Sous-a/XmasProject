@@ -4,7 +4,9 @@ import Game.Items.Item;
 import Game.Npc.Npc;
 import Map.Rooms.Room;
 
-public class Node {
+import java.io.Serializable;
+
+public class Node implements Serializable {
     private Node next;
     private Node right;
     private Node left;

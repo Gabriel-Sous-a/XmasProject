@@ -4,7 +4,9 @@ import Game.Items.Item;
 import Map.Node;
 import Map.Rooms.Room;
 
-public abstract class Key extends Item {
+import java.io.Serializable;
+
+public abstract class Key extends Item implements Serializable {
     String code;
 
     public Key(String name, String asciiArt, String description, String code) {
