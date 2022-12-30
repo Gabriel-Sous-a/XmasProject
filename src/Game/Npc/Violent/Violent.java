@@ -43,6 +43,7 @@ public abstract class Violent extends Npc {
             hpBar();
             System.out.println("1 - Attack      2- Healing items\n" +
                     "3 - run");
+            player.hpBar();
             System.out.print("->");
             int op = Input.inputMenuOptions(1, 3);
             switch (op) {
@@ -62,13 +63,13 @@ public abstract class Violent extends Npc {
                 return;
             }
 
-            hit(player);
+            attack(player);
             System.out.println(player.getHp());
         } while (player.getHp() > 0);
         System.out.println("you die!");
     }
 
-    public void hit(Player player) {
+    public void attack(Player player) {
         player.takeDamage(damage);
     }
 

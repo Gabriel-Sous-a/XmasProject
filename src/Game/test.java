@@ -25,19 +25,19 @@ public class test {
         ShiningKey key = new ShiningKey("ABCD");
         ShiningKey key1 = new ShiningKey("ABC0");
         Uselesskey key2 = new Uselesskey("key");
-        Player player = new Player(3,new Bag());
+        Player player = new Player("Adan",5,5,new Bag());
         player.getBag().addItem(key);
         player.getBag().addItem(key1);
         player.getBag().addItem(key2);
         player.getBag().addItem(new MetalBar());
+        player.getBag().addItem(new Knife());
         Demon demon = new Demon();
         CrazyMan crazyMan = new CrazyMan();
         ElderGhost elderGhost = new ElderGhost();
         Casper casper = new Casper();
-        casper.event(player);
-        elderGhost.event(player);
+        player.openPlayerBag();
         demon.event(player);
-        crazyMan.event(player);
+
 
 
 

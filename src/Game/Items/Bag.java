@@ -50,6 +50,12 @@ public class Bag {
         }
         if (item.getClass() == Knife.class || item.getClass() == MetalBar.class) {
             weapons.add((Weapon) item);
+            System.out.println("do you want to equip this? y/n");
+            String op = Input.yesOrNo();
+            if (op.equals("Y")){
+                player.setEquipped((Weapon) item);
+                return;
+            }
             return;
         }
         if (item.getClass() == ShiningKey.class || item.getClass() == Uselesskey.class) {
@@ -65,6 +71,8 @@ public class Bag {
             System.out.println("3 - Keys");
             System.out.println("0 - Exit");
             System.out.println("------------------------");
+            System.out.print("                                  ");
+            player.hpBar();
             int op = Input.inputMenuOptions(0, 3);
 
             switch (op) {

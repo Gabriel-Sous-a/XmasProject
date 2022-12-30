@@ -12,7 +12,7 @@ public class GameRun {
 
     public static boolean run () {
         Bag bag = new Bag();
-        Player player = new Player(3,bag);
+        Player player = new Player("player",5,5,bag);
         bag.setPlayer(player);
         TextArtImages.introTheHouseInTheWoods();
         switch (stringCheck()){
