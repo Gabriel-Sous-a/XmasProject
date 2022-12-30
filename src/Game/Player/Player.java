@@ -45,11 +45,6 @@ public class Player implements Serializable {
     public int getHp() {
         return hp;
     }
-
-    public Node getCurrentLocation() {
-        return currentLocation;
-    }
-
     public void setCurrentLocation(Node currentLocation) {
         this.currentLocation = currentLocation;
     }
@@ -141,7 +136,6 @@ public class Player implements Serializable {
             System.out.println("1 - Attack      2- Healing items\n" +
                     "3 - run");
             hpBar();
-            System.out.print("->");
             int op = Input.inputMenuOptions(1, 3);
             switch (op) {
                 case 1:

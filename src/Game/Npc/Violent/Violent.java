@@ -37,6 +37,9 @@ public abstract class Violent extends Npc {
 
     @Override
     public void event(Player player) {
+        if (!alive){
+            return;
+        }
         initialDialogue();
         do {
             System.out.println(asciiArt);
@@ -66,7 +69,6 @@ public abstract class Violent extends Npc {
 
     public abstract void deathDialogue();
 
-    public abstract void fistsDialogue();
 
     public void hpBar(){
         System.out.print(name + " ");
