@@ -6,19 +6,19 @@ import Game.Items.weapon.Weapon;
 import Game.Npc.Violent.Violent;
 import Map.Node;
 
+import java.io.Serializable;
 import java.util.Stack;
 
-public class Player {
+public class Player implements Serializable {
     String name;
-    int maxHp;
     int hp;
+    int maxHp;
     Bag bag;
     Node currentLocation;
     Stack<Node> path = new Stack<>();
     Weapon equipped;
 
-    public Player(String name,int hp,int maxhp, Bag bag) {
-        this.name = name;
+    public Player(int hp, Bag bag) {
         this.hp = hp;
         this.bag = bag;
         this.bag.setPlayer(this);
@@ -56,20 +56,8 @@ public class Player {
         this.path = path;
     }
 
-    public int getMaxHp() {
-        return maxHp;
-    }
-
-    public void setMaxHp(int maxHp) {
-        this.maxHp = maxHp;
-    }
-
     public Node getCurrentLocation() {
         return currentLocation;
-    }
-
-    public void setCurrentLocation(Node currentLocation) {
-        this.currentLocation = currentLocation;
     }
 
     public Weapon getEquipped() {
@@ -81,11 +69,15 @@ public class Player {
     }
 
     public void takeDamage(int amount){
+        if (hp - amount < 0){
+            hp = 0;
+            return;
+        }
         hp -= amount;
     }
     public void heal(int amount){
-        if (hp + amount > maxHp){
-            hp = maxHp;
+        if (hp + amount > 3){
+            hp = 3;
             return;
         }
         hp += amount;
@@ -110,13 +102,6 @@ public class Player {
             equipped = new Hands();
         }
         equipped.use(violent);
-    }
-    public void hpBar(){
-        System.out.print(name + " ");
-        for (int i = 0; i < hp; i++){
-            System.out.print("❤");
-        }
-        System.out.println();
     }
 
 }
