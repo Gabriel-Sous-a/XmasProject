@@ -6,6 +6,7 @@ public class Input {
 
     public static int inputMenuOptions(int initial, int finale){
         Scanner scan = new Scanner(System.in);
+        System.out.print("\n->");
         int op = scan.nextInt();
         if (op >= initial && op <= finale){
             return op;

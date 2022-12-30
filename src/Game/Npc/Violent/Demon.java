@@ -18,9 +18,5 @@ public class Demon extends Violent{
     public void deathDialogue() {
         System.out.println("*angry screams* \n you killed the " + name);
     }
-
-    @Override
-    public void fistsDialogue() {
-        System.out.println("You really will try to kill me with empty hands?");
-    }
 }
+

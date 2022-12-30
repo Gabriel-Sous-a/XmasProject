@@ -5,12 +5,12 @@ import Game.Npc.Npc_art.Npc_art;
 
 public class CrazyMan extends Violent{
     public CrazyMan() {
-        super("Crazy man",4 , Npc_art.crazyManArt(),1,new MetalBar());
+        super("Crazy man",5 , Npc_art.crazyManArt(),1,new MetalBar());
     }
 
     @Override
     public void initialDialogue() {
-        System.out.println("Hello little friend, are you ready to die? you cant kill me, cause you will be a murderer");
+        System.out.println("Hello little friend, are you ready to die? Let's play");
     }
 
 
@@ -19,8 +19,4 @@ public class CrazyMan extends Violent{
         System.out.println("The crazy mann is knocked out");
     }
 
-    @Override
-    public void fistsDialogue() {
-        System.out.println("oh this is so cute, you think that you can fight me with empty hands");
-    }
 }
