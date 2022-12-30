@@ -5,7 +5,7 @@ import Game.Npc.Npc_art.Npc_art;
 
 public class CrazyMan extends Violent{
     public CrazyMan() {
-        super("Crazy man", Npc_art.crazyManArt(),1,new MetalBar());
+        super("Crazy man",4 , Npc_art.crazyManArt(),1,new MetalBar());
     }
 
     @Override
@@ -13,10 +13,6 @@ public class CrazyMan extends Violent{
         System.out.println("Hello little friend, are you ready to die? you cant kill me, cause you will be a murderer");
     }
 
-    @Override
-    public void wrongWeaponDialog() {
-        System.out.println("You cant fight me with this");
-    }
 
     @Override
     public void deathDialogue() {

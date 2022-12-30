@@ -1,6 +1,9 @@
 package Game.Player;
 
 import Game.Items.Bag;
+import Game.Items.weapon.Hands;
+import Game.Items.weapon.Weapon;
+import Game.Npc.Violent.Violent;
 import Map.Node;
 
 import java.io.Serializable;
@@ -8,10 +11,12 @@ import java.util.Stack;
 
 public class Player implements Serializable {
     String name;
-    public int hp;
+    int hp;
+    int maxHp;
     Bag bag;
     Node currentLocation;
     Stack<Node> path = new Stack<>();
+    Weapon equipped;
 
     public Player(int hp, Bag bag) {
         this.hp = hp;
@@ -51,7 +56,23 @@ public class Player implements Serializable {
         this.path = path;
     }
 
+    public Node getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public Weapon getEquipped() {
+        return equipped;
+    }
+
+    public void setEquipped(Weapon equipped) {
+        this.equipped = equipped;
+    }
+
     public void takeDamage(int amount){
+        if (hp - amount < 0){
+            hp = 0;
+            return;
+        }
         hp -= amount;
     }
     public void heal(int amount){
@@ -76,7 +97,11 @@ public class Player implements Serializable {
     public void openPlayerBag(){
         bag.openBag();
     }
-
-
+    public void attack(Violent violent){
+        if (equipped == null){
+            equipped = new Hands();
+        }
+        equipped.use(violent);
+    }
 
 }

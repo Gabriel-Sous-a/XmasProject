@@ -103,6 +103,7 @@ public class Bag {
             switch (itemOp) {
                 case 1:
                     healing.get(op - 1).heal(player);
+                    healing.remove(op - 1);
                     break;
                 case 2:
                     System.out.println(healing.get(op - 1).getDescription());
@@ -122,15 +123,19 @@ public class Bag {
             }
 
             System.out.println("What you wanna do with this item?");
-            System.out.println("1 - read description");
-            System.out.println("2 - nothing");
+            System.out.println("1 - Equip");
+            System.out.println("2 - read description");
+            System.out.println("3 - nothing");
 
             int itemOp = Input.inputMenuOptions(1, 2);
             switch (itemOp) {
                 case 1:
-                    System.out.println(weapons.get(op - 1).getDescription());
+                    player.setEquipped(weapons.get(op - 1));
                     break;
                 case 2:
+                    System.out.println(weapons.get(op - 1).getDescription());
+                    break;
+                case 3:
                     break;
             }
         } while (true);
@@ -172,21 +177,15 @@ public class Bag {
             }
             boolean lock = keys.get(op - 1).open(locked);
             if (lock){
+                keys.remove(op - 1);
                 break;
             }
         } while (true);
 
 
     }
-    public Weapon violentNpcEvent(){
+    public void violentNpcEvent(){
 
-        System.out.println("0 - fists");
-        weapons.stream().forEach(e -> System.out.println((weapons.indexOf(e) + 1) + " - " + e.name));
-        int op = Input.inputMenuOptions(0, weapons.size());
-        if (op == 0) {
-            return null;
-        }
 
-        return weapons.get(op - 1);
     }
 }
