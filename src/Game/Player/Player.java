@@ -3,11 +3,12 @@ package Game.Player;
 import Game.Items.Bag;
 import Map.Node;
 
+import java.io.Serializable;
 import java.util.Stack;
 
-public class Player {
+public class Player implements Serializable {
     String name;
-    int hp;
+    public int hp;
     Bag bag;
     Node currentLocation;
     Stack<Node> path = new Stack<>();
@@ -75,4 +76,7 @@ public class Player {
     public void openPlayerBag(){
         bag.openBag();
     }
+
+
+
 }
