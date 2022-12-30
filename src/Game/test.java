@@ -7,9 +7,6 @@ import Game.Items.heal.Bandage;
 import Game.Items.items_text.Art;
 import Game.Items.weapon.Knife;
 import Game.Items.weapon.MetalBar;
-import Game.Npc.Peaceful.Casper;
-import Game.Npc.Peaceful.ElderGhost;
-import Game.Npc.Violent.CrazyMan;
 import Game.Npc.Violent.Demon;
 import Game.Player.Player;
 import Map.Node;
@@ -29,6 +26,7 @@ public class test {
         player.getBag().addItem(key);
         player.getBag().addItem(key1);
         player.getBag().addItem(key2);
+        player.getBag().addItem(new Knife());
         player.getBag().addItem(new MetalBar());
         player.setEquipped(new Knife());
         Demon demon = new Demon();
@@ -43,6 +41,12 @@ public class test {
 
 
 
+
+        player.getBag().openDoorBagAction(node);
+        Demon demon = new Demon();
+        demon.event(player);
+        System.out.println(player.getHp());
+        System.out.println(demon.isAlive());
 
     }
 }

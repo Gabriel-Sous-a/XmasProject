@@ -3,7 +3,6 @@ package Map;
 import Game.Player.Player;
 import VisualStats.Colors;
 import VisualStats.TextArtImages;
-
 import java.util.Scanner;
 
 public class RunMap {
@@ -14,6 +13,10 @@ public class RunMap {
 
     public static void run(Player player) {
         for (Node tempNode = MapCreation.create(); tempNode != null; tempNode = direction(tempNode, player)) {
+            if (tempNode.getValue().getCode().equals("1111")){
+                System.out.println(Colors.GREEN_BOLD_BRIGHT + "you win" + Colors.RESET);
+                break;
+            }
             tempNode.getValue().print();
         }
     }
@@ -30,7 +33,6 @@ public class RunMap {
                 case "w":
                     if (node.getNext() != null && node.getNext().isLock()) {
                         pickItem(node,player);
-                        System.out.println(Colors.BLUE + "works" + Colors.RESET);
                         return node.getNext();
                     }
                     if (node.getNext() != null && bagCheck(player,node, 0)){
@@ -94,7 +96,7 @@ public class RunMap {
                 System.out.println("that's a wall");
             }
         }
-        return null;
+        return node;
     }
 
     public static boolean bagCheck(Player player, Node node, int num) {

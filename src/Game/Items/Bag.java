@@ -8,12 +8,19 @@ import Game.Player.Player;
 import Map.Node;
 import Inputs.Input;
 
+import java.awt.*;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
 
 public class Bag {
+
     ArrayList<Heal> healing = new ArrayList<>();
     ArrayList<Weapon> weapons = new ArrayList<>();
     ArrayList<Key> keys = new ArrayList<>();
+    public static ArrayList<Key> keys1 = new ArrayList<>();
+    public static ArrayList<Item> bagList = new ArrayList<>(keys1);
+
     Player player;
 
 

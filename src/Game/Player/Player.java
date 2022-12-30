@@ -6,9 +6,10 @@ import Game.Items.weapon.Weapon;
 import Game.Npc.Violent.Violent;
 import Map.Node;
 
+import java.io.Serializable;
 import java.util.Stack;
 
-public class Player {
+public class Player implements Serializable {
     String name;
     int hp;
     int maxHp;
@@ -102,4 +103,5 @@ public class Player {
         }
         equipped.use(violent);
     }
+
 }
