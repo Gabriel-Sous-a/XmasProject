@@ -18,7 +18,9 @@ public class Player implements Serializable {
     Stack<Node> path = new Stack<>();
     Weapon equipped;
 
-    public Player(int hp, Bag bag) {
+    public Player(String name, int maxHp ,int hp, Bag bag) {
+        this.name = name;
+        this.maxHp = maxHp;
         this.hp = hp;
         this.bag = bag;
         this.bag.setPlayer(this);
@@ -68,6 +70,14 @@ public class Player implements Serializable {
         this.equipped = equipped;
     }
 
+    public int getMaxHp() {
+        return maxHp;
+    }
+
+    public void setMaxHp(int maxHp) {
+        this.maxHp = maxHp;
+    }
+
     public void takeDamage(int amount){
         if (hp - amount < 0){
             hp = 0;
@@ -76,8 +86,8 @@ public class Player implements Serializable {
         hp -= amount;
     }
     public void heal(int amount){
-        if (hp + amount > 3){
-            hp = 3;
+        if (hp + amount > maxHp){
+            hp = maxHp;
             return;
         }
         hp += amount;
@@ -102,6 +112,13 @@ public class Player implements Serializable {
             equipped = new Hands();
         }
         equipped.use(violent);
+    }
+    public void hpBar(){
+        System.out.print(name + " ");
+        for (int i = 0; i < hp; i++){
+            System.out.print("❤");
+        }
+        System.out.println();
     }
 
 }
