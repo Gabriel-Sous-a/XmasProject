@@ -4,11 +4,15 @@ import Game.Items.items_text.Art;
 import Game.Items.items_text.Description;
 import Map.Node;
 
+import java.io.Serializable;
+
 public class Uselesskey extends Key{
 
     public Uselesskey(String name) {
         super(name, Art.uselessKeyArt(), Description.uselessKeyDescription(), null);
     }
+
+
 
     @Override
     public boolean open(Node locked) {

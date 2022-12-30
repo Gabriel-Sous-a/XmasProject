@@ -3,7 +3,9 @@ package Game.Items.weapon;
 import Game.Items.Item;
 import Game.Npc.Violent.Violent;
 
-public abstract class Weapon extends Item {
+import java.io.Serializable;
+
+public abstract class Weapon extends Item implements Serializable {
 
     protected int damage;
 
@@ -19,4 +21,6 @@ public abstract class Weapon extends Item {
             violent.takeDamage(damage);
         }
 
+    public Weapon() {
+    }
 }

@@ -9,11 +9,12 @@ import Map.Node;
 import Inputs.Input;
 
 import java.awt.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Bag {
+public class Bag implements Serializable {
 
     ArrayList<Heal> healing = new ArrayList<>();
     ArrayList<Weapon> weapons = new ArrayList<>();
