@@ -11,6 +11,7 @@ import java.util.Stack;
 public class Player {
     String name;
     int hp;
+    int maxHp;
     Bag bag;
     Node currentLocation;
     Stack<Node> path = new Stack<>();

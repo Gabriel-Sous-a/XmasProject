@@ -35,7 +35,11 @@ public class test {
         CrazyMan crazyMan = new CrazyMan();
         ElderGhost elderGhost = new ElderGhost();
         Casper casper = new Casper();
-        demon.event(player);
+
+        player.getBag().openDoorBagAction(node);
+
+
+
 
 
 

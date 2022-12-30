@@ -96,6 +96,7 @@ public class Bag {
             switch (itemOp) {
                 case 1:
                     healing.get(op - 1).heal(player);
+                    healing.remove(op - 1);
                     break;
                 case 2:
                     System.out.println(healing.get(op - 1).getDescription());
@@ -169,6 +170,7 @@ public class Bag {
             }
             boolean lock = keys.get(op - 1).open(locked);
             if (lock){
+                keys.remove(op - 1);
                 break;
             }
         } while (true);
