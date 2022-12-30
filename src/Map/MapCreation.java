@@ -16,17 +16,17 @@ public class MapCreation {
 
     public static Node create () {
         Node nodeStart = new Node(new Start("0000"));
-        Node nodeA = new Node(new A("A000"));        //nao tem next, so right e left
+        Node nodeA = new Node(new A("A000"));
         Node nodeAA = new Node(new AA("AA00"));
-        Node nodeAAA = new Node(new AAA("AAA0"));      //nao tem next, so right e left
-        Node nodeAB = new Node(new AB("AB00"));       //nao tem next, so right e left
+        Node nodeAAA = new Node(new AAA("AAA0"));
+        Node nodeAB = new Node(new AB("AB00"));
         Node nodeABA = new Node(new ABA("ABA0"));
         Node nodeABB = new Node(new ABB("ABB0"));
         Node nodeABBA = new Node(new ABBA("ABBA"));
         Node nodeB = new Node(new B("B000"));
         Node nodeBA = new Node(new BA("BA00"));
-        Node nodeBAA = new Node(new BAA("BAA0"));      //nao tem back, so backRight e backLeft
-        Node nodeBAAA = new Node(new BAAA("BAAA"), new ShiningKey( "C000"));
+        Node nodeBAA = new Node(new BAA("BAA0"));
+        Node nodeBAAA = new Node(new BAAA("BAAA"), new ShiningKey("C000"));
         Node nodeBB = new Node(new BB("BB00"));
         Node nodeC = new Node(new C("C000"), false);
         Node nodeCA = new Node(new CA("CA00"));
@@ -35,7 +35,7 @@ public class MapCreation {
         Node nodeCC = new Node(new CC("CC00"));
         Node nodeF = new Node(new F("F000"), false);
         Node nodeFA = new Node(new FA("FA00"));
-        Node nodeFinal = new Node(new Final("0000"));
+        Node nodeFinal = new Node(new Final("1111"));
         setNode(nodeStart, nodeB, nodeA, nodeC, null,null,null);
         setNode(nodeA, null, nodeAB, nodeAA, nodeStart,null, null);
         setNode(nodeB, null, nodeBB, nodeBA, nodeStart,null,null);
@@ -60,5 +60,23 @@ public class MapCreation {
         return nodeStart;
 
 
+    }
+
+    public static Node mapCreation2 () {
+        Node nodeStart = new Node(new Start("0000"));
+        Node nodeA = new Node(new A("A000"));
+        Node nodeAA = new Node(new AA("AA00"));
+        Node nodeB = new Node(new B("B000"));
+        Node nodeBA = new Node(new BA("BA00"));
+        Node nodeBB = new Node(new BB("BB00"));
+        Node nodeC = new Node(new C("C000"), false);
+        Node nodeCA = new Node(new CA("CA00"));
+        Node nodeCAA = new Node(new CAA("CAA0"), new ShiningKey("F000"));
+        Node nodeCB = new Node(new CB("CB00"));
+        Node nodeCC = new Node(new CC("CC00"));
+        Node nodeF = new Node(new F("F000"), false);
+        Node nodeFA = new Node(new FA("FA00"));
+        Node nodeFinal = new Node(new Final("1111"));
+        return nodeStart;
     }
 }

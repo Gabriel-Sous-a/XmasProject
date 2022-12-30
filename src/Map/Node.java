@@ -16,6 +16,8 @@ public class Node {
     private boolean lock;
     private Npc npc;
 
+    private boolean win;
+
     public Node() {
     }
 
@@ -110,5 +112,13 @@ public class Node {
 
     public void setLock(boolean lock) {
         this.lock = lock;
+    }
+
+    public boolean isWin() {
+        return win;
+    }
+
+    public void setWin(boolean win) {
+        this.win = win;
     }
 }
