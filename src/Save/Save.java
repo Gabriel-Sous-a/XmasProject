@@ -1,6 +1,10 @@
 package Save;
 import Game.Player.Player;
+import VisualStats.Colors;
+import VisualStats.TextArtImages;
+
 import java.io.*;
+import java.util.Scanner;
 
 public class Save implements Serializable {
 
@@ -13,14 +17,14 @@ public class Save implements Serializable {
             out.writeObject(player);
             out.close();
             fileOut.close();
-            System.out.printf("Serialized data is saved");
+            System.out.printf(Colors.GREEN+""+Colors.BLACK_BACKGROUND+"Player " +player.getName()+ " is saved."+Colors.RESET+Colors.BLACK_BACKGROUND);
         } catch (Exception e) {
             System.out.println(e);
         }
     }
 
 
-    public static void load(String player){
+    public static Player load(String player){
         Player player1 = null;
         try {
             FileInputStream fileIn = new FileInputStream(player+".txt");
@@ -30,17 +34,36 @@ public class Save implements Serializable {
             fileIn.close();
         } catch (IOException i) {
             i.printStackTrace();
-            return;
+            return null;
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
 
-        System.out.println("Deserialized Player...");
-        System.out.println("Name: " + player1.getName());
-        System.out.println("Path: " + player1.getPath());
-        System.out.println("Bag: " + player1.getBag());
-        System.out.println("HP: " + player1.getHp());
-        System.out.println("HP: " + player1.getCurrentLocation());
+        System.out.println(Colors.GREEN+""+Colors.BLACK_BACKGROUND+"Loading Player "+player1.getName()+" info..."+Colors.RESET+Colors.BLACK_BACKGROUND);
+        return player1;
+    }
+
+    public static void saveExitMenu(Player player) {
+        int option;
+        Scanner sc = new Scanner(System.in);
+        boolean exitSave = false;
+        while (!exitSave) {
+            TextArtImages.saveExitMenu();
+            option = sc.nextInt();
+            switch (option) {
+                case 0:
+                    exitSave = true;
+                    break;
+                case 1:
+                    Save.save(player);
+                    break;
+                case 2:
+                    exitSave = true;
+                    break;
+                default:
+                    System.out.println("Invalid option");
+            }
+        }
     }
 
 
