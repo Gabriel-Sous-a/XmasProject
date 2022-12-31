@@ -3,8 +3,9 @@ package Map;
 import Game.Player.Player;
 import VisualStats.Colors;
 import VisualStats.TextArtImages;
-
 import java.util.Scanner;
+
+import static Save.Save.saveExitMenu;
 
 public class RunMap {
     private static Scanner scan = new Scanner(System.in);
@@ -118,9 +119,8 @@ public class RunMap {
                 lookBool = true;
                 return lookBack(node, player);
             }
-            case "m" -> {
-                //por menu aqui
-            }
+            case "m" -> {saveExitMenu(player);}
+
         }
         return node;
     }
