@@ -21,7 +21,7 @@ public class MapCreation {
         actual.setBackRight(backRight);
     }
 
-    public static Node create() {
+    public static Node[] create() {
         Node nodeStart = new Node(new Start("0000"));
         Node nodeA = new Node(new A("A000"), new Casper());
         Node nodeAA = new Node(new AA("AA00"));
@@ -64,12 +64,12 @@ public class MapCreation {
         setNode(nodeABA, nodeAAA, null, null, nodeAB, null, null);
         setNode(nodeABB, nodeABBA, null, null, null, nodeAAA, nodeAB);
         setNode(nodeABBA, null, nodeC, nodeStart, nodeABB, null, null);
-        return nodeStart;
-
+        return new Node[]{nodeStart, nodeA, nodeB, nodeC, nodeCA, nodeCAA, nodeCB, nodeCC, nodeF, nodeFA, nodeFinal, nodeBA, nodeBAA, nodeBAA,
+                nodeBAAA, nodeBB, nodeAA, nodeAAA, nodeAB, nodeABA, nodeABB, nodeABBA};
 
     }
 
-    public static Node create2() {
+    public static Node [] create2() {
         Node nodeStart = new Node(new Start("0000"));
         Node nodeA = new Node(new A("A000"));
         Node nodeAA = new Node(new AA("AA00"), new MetalBar());
@@ -83,15 +83,15 @@ public class MapCreation {
         Node nodeFinal = new Node(new Final("1111"), false);
         setNode(nodeStart, nodeB, nodeC, nodeA, nodeFinal, null, null);
         setNode(nodeA, nodeAA, null, null, nodeStart, null, null);
-        setNode(nodeAA, null,null,null, nodeA,null,null);
-        setNode(nodeB, null, nodeBB, nodeBA, nodeStart, null,null);
-        setNode(nodeBA, null, null,null, nodeB, null, null);
-        setNode(nodeBB, null, nodeBBB, nodeBBA, nodeB, null,null);
-        setNode(nodeBBA, nodeBBAA, null,null,nodeBB, null,null);
-        setNode(nodeBBAA, null,null,null, nodeBBA,null,null);
+        setNode(nodeAA, null, null, null, nodeA, null, null);
+        setNode(nodeB, null, nodeBB, nodeBA, nodeStart, null, null);
+        setNode(nodeBA, null, null, null, nodeB, null, null);
+        setNode(nodeBB, null, nodeBBB, nodeBBA, nodeB, null, null);
+        setNode(nodeBBA, nodeBBAA, null, null, nodeBB, null, null);
+        setNode(nodeBBAA, null, null, null, nodeBBA, null, null);
         setNode(nodeBBB, null, null, null, null, nodeBB, nodeC);
-        setNode(nodeC,nodeBBB, null,null, nodeStart,null,null);
-        setNode(nodeFinal, null,null, null, nodeStart, null,null);
-        return nodeStart;
+        setNode(nodeC, nodeBBB, null, null, nodeStart, null, null);
+        setNode(nodeFinal, null, null, null, nodeStart, null, null);
+        return new Node [] {nodeStart, nodeA, nodeAA, nodeB, nodeBA, nodeBB, nodeBBA, nodeBBAA, nodeBBB, nodeC, nodeFinal};
     }
 }
