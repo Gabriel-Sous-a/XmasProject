@@ -14,8 +14,9 @@ public class RunMap {
     public RunMap() {
     }
 
-    public static boolean run(Player player) {
-        for (Node tempNode = MapCreation.create2(); tempNode != null; tempNode = direction(tempNode, player)) {
+    public static void run(Player player) {
+        player.setLevel(0);
+        for (Node tempNode = MapCreation.create2()[0]; tempNode != null; tempNode = direction(tempNode, player)) {
             if (tempNode.getValue().getCode().equals("1111")) {
                 System.out.println(Colors.GREEN_BOLD_BRIGHT + "you won level 1" + Colors.RESET);
                 break;
@@ -26,14 +27,15 @@ public class RunMap {
             }
             tempNode.getValue().print();
         }
+        player.setLevel(1);
         System.out.println("Do you want to keep playing?");
         System.out.print("->");
         if (playAgainCheck()) {
-            for (Node tempNode = MapCreation.create(); tempNode != null; tempNode = direction(tempNode, player)) {
+            for (Node tempNode = MapCreation.create()[0]; tempNode != null; tempNode = direction(tempNode, player)) {
                 if (tempNode.getValue().getCode().equals("1111")) {
                     System.out.println(Colors.GREEN_BOLD_BRIGHT + "you win" + Colors.RESET);
                     if (!playAgainCheck()) {
-                        return false;
+                        return;
                     }
                     break;
                 }
@@ -44,7 +46,6 @@ public class RunMap {
                 tempNode.getValue().print();
             }
         }
-        return false;
     }
 
     public static String questionVerification() {

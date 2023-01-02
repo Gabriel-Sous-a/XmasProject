@@ -20,6 +20,8 @@ public class Player implements Serializable {
     Stack<Node> path = new Stack<>();
     Weapon equipped;
 
+    int level = 0;
+
     public Player(String name, int maxHp ,int hp, Bag bag) {
         this.name = name;
         this.maxHp = maxHp;
@@ -33,6 +35,13 @@ public class Player implements Serializable {
 
     }
 
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
 
     public String getName() {
         return name;
