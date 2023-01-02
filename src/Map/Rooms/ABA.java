@@ -7,6 +7,6 @@ public class ABA extends Room{
 
     @Override
     public void print() {
-        System.out.println("ABA");
+        System.out.println("Hallway");
     }
 }
