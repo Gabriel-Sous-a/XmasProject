@@ -37,7 +37,7 @@ public class GameRun {
     }
 
     public static String stringCheck() {
-        String choice = scan.next();
+        String choice = scan.next().toLowerCase();
         if (choice.equals("1") || choice.equals("2") || choice.equals("0")) {
             return choice;
         }
@@ -46,7 +46,7 @@ public class GameRun {
     }
 
     public static boolean playAgainCheck() {
-        String choice = scan.next();
+        String choice = scan.next().toLowerCase();
         if (choice.equals("y")) {
             return true;
         }

@@ -25,6 +25,7 @@ public class RunMap {
                 System.out.println(Colors.GREEN_BOLD_BRIGHT + "you lost" + Colors.RESET);
                 break;
             }
+            player.setCurrentLocation(tempNode);
             tempNode.getValue().print();
         }
         player.setLevel(1);
@@ -43,6 +44,7 @@ public class RunMap {
                     System.out.println(Colors.GREEN_BOLD_BRIGHT + "you lost" + Colors.RESET);
                     break;
                 }
+                player.setCurrentLocation(tempNode);
                 tempNode.getValue().print();
             }
         }
@@ -51,7 +53,7 @@ public class RunMap {
     public static String questionVerification() {
         System.out.println("where to go?");
         System.out.print("->");
-        String choice = scan.next();
+        String choice = scan.next().toLowerCase();
         return !choice.equals("w") && !choice.equals("a") && !choice.equals("d") && !choice.equals("s") && !choice.equals("i") && !choice.equals("m") ? questionVerification() : choice;
     }
 
@@ -139,7 +141,7 @@ public class RunMap {
                     pickItem(node, player, 3);
                     checkNpc(node, player, 3);
                     return node.getBack();
-                } else if (bagCheck(player, node, 3) && !node.getBack().isLock()) {
+                } else if (node.getBack() != null && bagCheck(player, node, 3) && !node.getBack().isLock()) {
                     System.out.println("This door is locked, try to find a key");
                     break;
                 }
@@ -361,7 +363,7 @@ public class RunMap {
     }
 
     public static boolean playAgainCheck() {
-        String choice = scan.next();
+        String choice = scan.next().toLowerCase();
         if (choice.equals("y")) {
             return true;
         }
