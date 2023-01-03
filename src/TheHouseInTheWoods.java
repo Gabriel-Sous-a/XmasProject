@@ -48,6 +48,13 @@ public class TheHouseInTheWoods {
             option = sc.nextInt();
             switch (option) {
                 case 1:
+                    System.out.println("""
+                                               As you usually do at the end of the day, you go for a run in a forest near your city, but this time you took a path you have never taken before. 
+                                               After a few hours of exercise you suddenly see a huge house, that almost seems like an old mansion, which intrigued you, and since you are very curious
+                                                and adventurous, you chose to take a quick look even though is getting dark.
+                                               The entry/lobby door is open so you step in and take a look , as you enter further you hear the door you just came from closing behind you! You try to
+                                                open it but strangely it is now locked.. You hope it was the wind but you have your doubts...
+                """);
                     Bag bag = new Bag();
                     System.out.print("Insert name for save file. \n SaveName:");
                     name = sc.next();
