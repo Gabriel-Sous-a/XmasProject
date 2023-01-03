@@ -17,7 +17,7 @@ public class RunMap {
 
     public static boolean run(Player player) {
         player.setLevel(0);
-        Node tempNode = null;
+        Node tempNode;
         for (tempNode = MapCreation.create2()[0]; tempNode != null; tempNode = direction(tempNode, player)) {
             if (tempNode.getValue().getCode().equals("1111")) {
                 System.out.println(Colors.GREEN_BOLD_BRIGHT + "you won level 1" + Colors.RESET);
@@ -25,7 +25,7 @@ public class RunMap {
             }
             if (player.getHp() <= 0) {
                 System.out.println(Colors.GREEN_BOLD_BRIGHT + "you lost" + Colors.RESET);
-                break;
+                return false;
             }
             player.setCurrentLocation(tempNode);
             tempNode.getValue().print();
@@ -47,7 +47,7 @@ public class RunMap {
                 }
                 if (player.getHp() <= 0) {
                     System.out.println(Colors.GREEN_BOLD_BRIGHT + "you lost" + Colors.RESET);
-                    break;
+                    return false;
                 }
                 player.setCurrentLocation(tempNode);
                 tempNode.getValue().print();

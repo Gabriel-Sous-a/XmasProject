@@ -1,5 +1,6 @@
 import Game.Items.Bag;
 import Game.Player.Player;
+import Inputs.Input;
 import Save.Save;
 import VisualStats.Colors;
 import VisualStats.TextArtImages;
@@ -20,7 +21,7 @@ public class TheHouseInTheWoods {
             int option;
             System.out.println(Colors.BLACK_BACKGROUND);
             TextArtImages.introTheHouseInTheWoods();
-            option = sc.nextInt();
+            option = Input.inputMenuOptions(0,2);
             switch (option) {
                 case 1:
                     play();
