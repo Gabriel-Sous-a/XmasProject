@@ -10,13 +10,15 @@ import static Save.Save.saveExitMenu;
 public class RunMap {
     private static Scanner scan = new Scanner(System.in);
     private static boolean lookBool;
+    private static boolean exitGame;
 
     public RunMap() {
     }
 
-    public static void run(Player player) {
+    public static boolean run(Player player) {
         player.setLevel(0);
-        for (Node tempNode = MapCreation.create2()[0]; tempNode != null; tempNode = direction(tempNode, player)) {
+        Node tempNode = null;
+        for (tempNode = MapCreation.create2()[0]; tempNode != null; tempNode = direction(tempNode, player)) {
             if (tempNode.getValue().getCode().equals("1111")) {
                 System.out.println(Colors.GREEN_BOLD_BRIGHT + "you won level 1" + Colors.RESET);
                 break;
@@ -28,15 +30,18 @@ public class RunMap {
             player.setCurrentLocation(tempNode);
             tempNode.getValue().print();
         }
+        if (tempNode == null){
+            return true;
+        }
         player.setLevel(1);
         System.out.println("Do you want to keep playing?");
         System.out.print("->");
         if (playAgainCheck()) {
-            for (Node tempNode = MapCreation.create()[0]; tempNode != null; tempNode = direction(tempNode, player)) {
+            for (tempNode = MapCreation.create()[0]; tempNode != null; tempNode = direction(tempNode, player)) {
                 if (tempNode.getValue().getCode().equals("1111")) {
                     System.out.println(Colors.GREEN_BOLD_BRIGHT + "you win" + Colors.RESET);
                     if (!playAgainCheck()) {
-                        return;
+                        return true;
                     }
                     break;
                 }
@@ -47,11 +52,13 @@ public class RunMap {
                 player.setCurrentLocation(tempNode);
                 tempNode.getValue().print();
             }
+            return tempNode == null;
         }
+        return false;
     }
 
     public static String questionVerification() {
-        System.out.println("where to go?");
+        System.out.println("where to go? W to foward, D to right, A to left, S to look back, I to open inventory and M to open the menu");
         System.out.print("->");
         String choice = scan.next().toLowerCase();
         return !choice.equals("w") && !choice.equals("a") && !choice.equals("d") && !choice.equals("s") && !choice.equals("i") && !choice.equals("m") ? questionVerification() : choice;
@@ -122,8 +129,11 @@ public class RunMap {
                 lookBool = true;
                 return lookBack(node, player);
             }
-            case "m" -> {saveExitMenu(player);}
-
+            case "m" -> {
+                if (saveExitMenu(player)){
+                    return null;
+                }
+            }
         }
         return node;
     }
