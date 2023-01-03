@@ -47,6 +47,7 @@ public class Bag implements Serializable {
     public void addItem(Item item) {
         if (item.getClass() == Bandage.class || item.getClass() == FistAidKit.class) {
             healing.add((Heal) item);
+            player.getCurrentLocation().setItem(null);
             return;
         }
         if (item.getClass() == Knife.class || item.getClass() == MetalBar.class) {
@@ -55,12 +56,13 @@ public class Bag implements Serializable {
             String op = Input.yesOrNo();
             if (op.equals("Y")){
                 player.setEquipped((Weapon) item);
-                return;
             }
+            player.getCurrentLocation().setItem(null);
             return;
         }
         if (item.getClass() == ShiningKey.class || item.getClass() == Uselesskey.class) {
             keys.add((Key) item);
+            player.getCurrentLocation().setItem(null);
         }
     }
 
