@@ -3,7 +3,9 @@ package Game.Npc.Violent;
 import Game.Items.weapon.MetalBar;
 import Game.Npc.Npc_art.Npc_art;
 
-public class CrazyMan extends Violent{
+import java.io.Serializable;
+
+public class CrazyMan extends Violent {
     public CrazyMan() {
         super("Crazy man",5 , Npc_art.crazyManArt(),1,new MetalBar());
     }

@@ -18,16 +18,26 @@ import Map.Rooms.AA;
 import Map.Rooms.ABBA;
 import Map.Rooms.C;
 import Map.Rooms.Room;
+import Map.RunMap;
 
 public class test {
     public static void main(String[] args) {
 
         Node node = new Node(new C("ABCD"),false);
+        Player player = new Player("Adan",5,5,new Bag());
+
+        /*
+        Demon demon = new Demon();
+        CrazyMan crazyMan = new CrazyMan();
+        ElderGhost elderGhost = new ElderGhost();
+        Casper casper = new Casper();
+        player.openPlayerBag();
+
+        demon.event(player);*/
 
         ShiningKey key = new ShiningKey("ABCD");
         ShiningKey key1 = new ShiningKey("ABC0");
         Uselesskey key2 = new Uselesskey("key");
-        Player player = new Player("Adan",5,5,new Bag());
         player.getBag().addItem(key);
         player.getBag().addItem(key1);
         player.getBag().addItem(key2);
@@ -35,13 +45,7 @@ public class test {
         player.getBag().addItem(new Knife());
         player.getBag().addItem(new FistAidKit());
         player.getBag().addItem(new Bandage());
-        Demon demon = new Demon();
-        CrazyMan crazyMan = new CrazyMan();
-        ElderGhost elderGhost = new ElderGhost();
-        Casper casper = new Casper();
-        player.openPlayerBag();
-        demon.event(player);
-
+        RunMap.run(player);
 
 
 

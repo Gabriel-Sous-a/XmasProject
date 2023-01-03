@@ -5,7 +5,9 @@ import Game.Npc.Npc;
 import Game.Player.Player;
 import Inputs.Input;
 
-public abstract class Violent extends Npc {
+import java.io.Serializable;
+
+public abstract class Violent extends Npc implements Serializable {
     protected int hp;
     protected int damage;
     protected boolean alive;
