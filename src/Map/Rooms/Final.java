@@ -7,6 +7,7 @@ public class Final extends Room{
 
     @Override
     public void print() {
-        System.out.println("FINAL");
+        System.out.println("The outdoors");
+        System.out.println("Or so it seems...");
     }
 }

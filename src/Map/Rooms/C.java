@@ -7,6 +7,6 @@ public class C extends Room{
 
     @Override
     public void print() {
-        System.out.println("C");
+        System.out.println("Hallway");
     }
 }
