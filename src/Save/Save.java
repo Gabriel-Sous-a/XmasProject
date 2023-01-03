@@ -18,7 +18,7 @@ public class Save implements Serializable {
             out.writeObject(player);
             out.close();
             fileOut.close();
-            System.out.printf(Colors.GREEN+""+Colors.BLACK_BACKGROUND+"Player " +player.getName()+ " is saved."+Colors.RESET+Colors.BLACK_BACKGROUND);
+            System.out.println(Colors.GREEN+""+Colors.BLACK_BACKGROUND+"Player " +player.getName()+ " is saved."+Colors.RESET+Colors.BLACK_BACKGROUND);
         } catch (Exception e) {
             System.out.println(e);
         }

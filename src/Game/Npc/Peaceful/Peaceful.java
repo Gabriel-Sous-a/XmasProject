@@ -5,7 +5,9 @@ import Game.Items.weapon.Weapon;
 import Game.Npc.Npc;
 import Game.Player.Player;
 
-public abstract class Peaceful extends Npc {
+import java.io.Serializable;
+
+public abstract class Peaceful extends Npc implements Serializable {
     protected Knife knife;
     public Peaceful(String name, String asciiArt) {
         super(name, asciiArt);

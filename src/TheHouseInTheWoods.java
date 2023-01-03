@@ -56,14 +56,14 @@ public class TheHouseInTheWoods {
                     if (run(player)){
                         return;
                     }
-                    System.out.println("Want to play again? \n" +
+                    /*System.out.println("Want to play again? \n" +
                             "n to no \n" +
                             "y to yes");
                     if (playAgainCheck()) {
                         if (run(player)){
                             return;
                         }
-                    }
+                    }*/
                     break;
                 case 2:
                     System.out.print("Insert name of save file. \n SaveName:");
