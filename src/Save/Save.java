@@ -1,5 +1,6 @@
 package Save;
 import Game.Player.Player;
+import Inputs.Input;
 import VisualStats.Colors;
 import VisualStats.TextArtImages;
 
@@ -43,27 +44,27 @@ public class Save implements Serializable {
         return player1;
     }
 
-    public static void saveExitMenu(Player player) {
+    public static boolean saveExitMenu(Player player) {
         int option;
         Scanner sc = new Scanner(System.in);
-        boolean exitSave = false;
-        while (!exitSave) {
+
+
             TextArtImages.saveExitMenu();
-            option = sc.nextInt();
+            option = Input.inputMenuOptions(0,2);
             switch (option) {
                 case 0:
-                    exitSave = true;
-                    break;
+                    return true;
                 case 1:
                     Save.save(player);
                     break;
                 case 2:
-                    exitSave = true;
-                    break;
+                    return false;
                 default:
                     System.out.println("Invalid option");
+                    return saveExitMenu(player);
             }
-        }
+
+        return false;
     }
 
 

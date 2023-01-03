@@ -29,7 +29,7 @@ public class TheHouseInTheWoods {
                     howToPlay();
                     break;
                 case 0:
-                    System.out.println("\t\t\t\t\t\tSee you latter!");
+                    System.out.println("\t\t\t\t\t\tSee you later!");
                     exit = true;
                     break;
                 default:
@@ -52,13 +52,16 @@ public class TheHouseInTheWoods {
                     name = sc.next();
                     Player player = new Player(name, 5, 5, bag);
                     bag.setPlayer(player);
-                    run(player);
-
+                    if (run(player)){
+                        return;
+                    }
                     System.out.println("Want to play again? \n" +
                             "n to no \n" +
                             "y to yes");
                     if (playAgainCheck()) {
-                        run(player);
+                        if (run(player)){
+                            return;
+                        }
                     }
                     break;
                 case 2:
